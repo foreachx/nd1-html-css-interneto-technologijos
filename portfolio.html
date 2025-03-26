@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolekcija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Justino automobilių kolekcija</h1>
+        <nav>
+            <ul class="nav">
+                <li><a href="index.html">Pagrindinis</a></li>
+                <li><a href="portfolio.html">Kolekcija</a></li>
+                <li><a href="kontaktai.html">Kontaktai</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Automobilių kolekcija</h2>
+            <div class="grid">
+                  <!-- Impreza (originaliai 1.5, dabar custom) -->
+                  <div class="card">
+                    <div class="slideshow-container">
+                        <div class="slide fade">
+                            <img src="images/impreza/1.jpg" alt="Impreza 1">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/impreza/2.jpg" alt="Impreza 2">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/impreza/3.jpg" alt="Impreza 3">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/impreza/5.jpg" alt="Impreza 4">
+                        </div>
+                    </div>
+                    <h3>Subaru Impreza GH (ex 1.5) – custom projektas</h3>
+                    <p>Iš pradžių paprastas 1.5l modelis, dabar – visas WRX gėris su EJ205 + EVO turba.</p>
+
+                    <!-- LENTELĖ su modifikacijomis -->
+                    <div class="spec-table">
+                        <h4>Projekto modifikacijų lentelė</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Modifikacija</th>
+                                    <th>Aprašymas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Variklis EJ205 (rebuilt)</td>
+                                    <td>Atliktas cilindrų remontas, sudėtos ARP varžtai, Cometic galvos tarpinės.</td>
+                                </tr>
+                                <tr>
+                                    <td>ECUMaster EMU Black</td>
+                                    <td>Pilnai programuojamas valdymo blokas, realaus laiko stebėjimas, galimybė valdyti papildomas modifikacijas.</td>
+                                </tr>
+                                <tr>
+                                    <td>Custom išmetimas</td>
+                                    <td>Modifikuotas kolektorius su upipe/downpipe, visa sistema nuo turbinos iki galo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Kuro sistema</td>
+                                    <td>BOSCH 630cc purkštukai, Walbro siurblys, TurboSmart slėgio reguliatorius, sinchroninė jungčių sistema.</td>
+                                </tr>
+                                <tr>
+                                    <td>Turbina EVO9 TD05HR (twinscroll)</td>
+                                    <td>Aukštesnis slėgis, greitesnis spool, pritaikyta Subaru varikliui.</td>
+                                </tr>
+                                <tr>
+                                    <td>Aušinimas</td>
+                                    <td>Didesnis intercooleris, papildomas radiatoriaus upgrade, 4-cyl coolant mod.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pakaba & stabdžiai</td>
+                                    <td>H&R coiloveriai, WRX stabdžių sistema, armuotos stabdžių šlangutės.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="grid">
+                <!-- Legacy GT -->
+                <div class="card">
+                    <img src="images/legacy-gt/1.jpg">
+                    <h3>Subaru Legacy GT (2005)</h3>
+                    <p>EJ255 turbo – daily + trasai.</p>
+                </div>
+
+                <!-- Ford Sierra -->
+                <div class="card">
+                    <img src="images/sierra/1.jpg">
+                    <h3>Ford Sierra MK2 4x4</h3>
+                    <p>Rally stiliaus retro karavanas.</p>
+                </div>
+
+                <!-- Opel Ascona -->
+                <div class="card">
+                    <img src="images/ascona/2.jpg">
+                    <h3>Opel Ascona</h3>
+                    <p>Senos mokyklos RWD projektas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Justinas Vijeikis</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            const slides = document.querySelectorAll('.slideshow-container .slide');
+            slides.forEach(s => s.style.display = 'none');
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+
+    <style>
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            height: 180px;
+        }
+        .slide img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .spec-table {
+            margin: 20px;
+        }
+        .spec-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        .spec-table th,
+        .spec-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 0.95rem;
+        }
+        .spec-table th {
+            background-color: #eee;
+        }
+    </style>
+</body>
+</html>
